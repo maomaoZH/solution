@@ -38,6 +38,9 @@ class Pages extends Component {
 
   resetCanvasSize() {
     const canvas = this.refs.canvas;
+    if (!canvas) {
+      return;
+    }
     canvas.width = 0;
     canvas.height = 0;
     canvas.width = this.refs.container.clientWidth;
