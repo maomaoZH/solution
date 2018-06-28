@@ -1,0 +1,27 @@
+:local .topics {
+  display: flex;
+  flex-direction: column;
+  margin: 36px;
+}
+
+:local .list  {
+  height: 60px;
+  border-bottom: 1px solid #d7dcdf;
+  display: flex;
+  align-items: center;
+  color: #282d30;
+}
+
+:local .list:last-child {
+  border-bottom: none;
+}
+
+:local .post {
+  color: #919aa1;
+  text-transform: uppercase;
+  margin-left: 16px;
+}
+
+:local .countUp {
+  margin-right: 8px;
+}

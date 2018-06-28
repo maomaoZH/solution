@@ -1,0 +1,24 @@
+:local .pages {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+:local .text {
+  margin: 12px;
+  text-align: center;
+}
+
+:local .container {
+  flex: 1;
+  margin: 12px;
+  border: 1px dotted;
+  width: calc(100% - 24px);
+}
+
+@media (max-width: 454px) {
+  :local .container {
+    max-width: 263px;
+  }
+}

@@ -1,0 +1,90 @@
+:local .app {
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  grid-template-columns: 1fr;
+  height: 100%;
+  width: 100%;
+  justify-items: center;
+  min-width: 320px;
+  grid-template-columns: 1fr;
+  background-color: #919aa1;
+}
+
+:local .header {
+  font-size: 30px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+:local .subHeader {
+  font-size: 16px;
+  margin-left: 24px;
+  text-transform: uppercase;
+}
+
+:local .container {
+  display: grid;
+  height: calc(100vh - 104px);
+  margin: 0 24px 24px;
+  padding: 12px;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 1fr;
+  width: calc(100% - 48px);
+  background: #636d76;
+  border: 2px solid #475057;
+  overflow-y: auto;
+}
+
+:local .tabLists {
+  display: flex;
+  align-items: center;
+}
+
+:local .tab {
+  display: flex;
+  height: 60px;
+  padding: 0 24px;
+  align-items: center;
+  margin-right: 12px;
+  background: #484c55;
+  color: #ffd491;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.4s;
+}
+
+:local .tab.active {
+  background: #ffffff;
+  color: #282d30;
+  border: 2px solid #475057;
+  border-bottom-style: none;
+}
+
+:local .main {
+  flex: 1;
+  color: #282d30;
+  background: #ffffff;
+  border: 2px solid #475057;
+  border-top-style: none;
+}
+
+@media (max-width: 454px) {
+
+  :local .header {
+    font-size: 30px;
+  }
+  :local .container {
+    margin: 0 12px 24px;
+    width: calc(100% - 24px);
+  }
+  :local .tab {
+    font-size: 12px;
+    padding: 0 12px;
+  }
+  :local .main {
+    display: flex;
+    justify-content: center;
+  }
+}
