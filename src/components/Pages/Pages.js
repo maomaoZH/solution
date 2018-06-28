@@ -11,6 +11,7 @@ class Pages extends Component {
   constructor(props) {
     super(props);
     this.draw = this.draw.bind(this);
+    this.resetCanvasSize = this.resetCanvasSize.bind(this);
   }
 
   draw(e, ctx) {
@@ -35,6 +36,19 @@ class Pages extends Component {
     }
   }
 
+  resetCanvasSize() {
+    const canvas = this.refs.canvas;
+    canvas.width = 0;
+    canvas.height = 0;
+    canvas.width = this.refs.container.clientWidth;
+    canvas.height = this.refs.container.clientHeight;
+    const ctx = canvas.getContext('2d');
+    ctx.strokeStyle = '#000';
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+    ctx.lineWidth = 1;
+  }
+
   componentDidMount() {
     const canvas = this.refs.canvas;
     canvas.width = this.refs.container.clientWidth;
@@ -52,6 +66,7 @@ class Pages extends Component {
     });
     canvas.addEventListener('mouseup', () => isDrawing = false);
     canvas.addEventListener('mouseout', () => isDrawing = false);
+    window.addEventListener('resize', this.resetCanvasSize);
   }
 
   render() {
