@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './Archives.css';
+import loader from '../assets/hearts.svg';
 
 class Archives extends Component {
   constructor(props) {
@@ -29,14 +30,14 @@ class Archives extends Component {
     return (
       <div className={styles.archives}>
         {this.state.images ? this.state.images.map((image, index) =>
-          <div className={styles.container} key={index}>
+          <section className={styles.container} key={index}>
             <div className={styles.imageContainer}>
               <img className={styles.image} src={image.url} />
             </div>
-            <div className={styles.text}>{this.state.text}</div>
-          </div>
+            <article className={styles.text}>{this.state.text}</article>
+          </section>
         ) : 
-          <div className={styles.text}>I am working hard to load...Bear with me 😘</div>
+          <img src={loader} />
         }
       </div>
     );

@@ -42,11 +42,11 @@ class App extends Component {
     } = this.state;
     return (
       <div className={styles.app}>
-        <div className={styles.header}>Browse Site
+        <header className={styles.header}>Browse Site
           <span className={styles.subHeader}>Select a tab</span>
-        </div>
+        </header>
         <div className={styles.container}>
-          <div className={styles.tabLists}>
+          <nav className={styles.tabLists}>
             {tabs.map((tab, index) =>
               <div
                 className={cx({tab: true, active: activeTab === index})}
@@ -55,10 +55,10 @@ class App extends Component {
                 {tab}
               </div>
             )}
-          </div>
-          <div className={styles.main}>
+          </nav>
+          <main className={styles.main}>
             {this.renderActiveTab()}
-          </div>
+          </main>
         </div>
       </div>
     );

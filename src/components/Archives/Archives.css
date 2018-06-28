@@ -5,6 +5,8 @@
   grid-gap: 20px;
   justify-items: center;
   padding: 24px;
+  height: 100%;
+  align-items: center;
 }
 
 :local .container {
