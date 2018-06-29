@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CountUp from 'react-countup';
+import CountUp from './CountUp';
 import styles from './Topics.css';
 import getRandomTab from '../../helpers/getRandomTab'
 
@@ -25,7 +25,7 @@ class Topics extends Component {
           <div key={index} className={styles.list}>
             {topic.name}
             <span className={styles.post}>
-              <CountUp className={styles.countUp} start={0} end={topic.postNum} duration={4}/>
+              <CountUp startNum={0} endNum={topic.postNum} duration={1500}/>
               Posts
             </span>
           </div>
